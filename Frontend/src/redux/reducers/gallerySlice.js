@@ -10,7 +10,7 @@ const initialState = {
 export const getAllImages = createAsyncThunk(
   "images/fetchAllImages",
   async () => {
-    const res = await axios.get("http://localhost:3000/api/v1/get/images");
+    const res = await axios.get("https://vishwendra-gallery.onrender.com/api/v1/get/images");
     return res.data;
   }
 );
@@ -18,7 +18,7 @@ export const getAllImages = createAsyncThunk(
 export const getAllCategories = createAsyncThunk(
   "images/fetchAllCategories",
   async () => {
-    const res = await axios.get("http://localhost:3000/api/v1/get/categories");
+    const res = await axios.get("https://vishwendra-gallery.onrender.com/api/v1/get/categories");
     return res.data;
   }
 );
@@ -27,7 +27,7 @@ export const postNewCategory = createAsyncThunk(
   "images/postNewCategory",
   async (payload) => {
     const res = await axios.post(
-      "http://localhost:3000/api/v1/add/category",
+      "https://vishwendra-gallery.onrender.com/api/v1/add/category",
       payload
     );
     return res.data;
@@ -38,7 +38,7 @@ export const postNewImage = createAsyncThunk(
   "images/postNewImage",
   async (payload) => {
     const res = await axios.post(
-      "http://localhost:3000/api/v1/upload/image",
+      "https://vishwendra-gallery.onrender.com/api/v1/upload/image",
       payload
     );
     return res.data;
@@ -49,7 +49,7 @@ export const getSingleImage = createAsyncThunk(
   "images/getSingleImage",
   async (payload) => {
     const res = await axios.get(
-      `http://localhost:3000/api/v1/get/singleimage?category=${payload}`
+      `https://vishwendra-gallery.onrender.com/api/v1/get/singleimage?category=${payload}`
     );
     return res.data;
   }
