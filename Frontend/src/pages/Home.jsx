@@ -54,7 +54,7 @@ const Home = () => {
               className="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe my-4"
             >
               <img
-                src={`https://vishwendra-gallery.onrender.com/${item.name}`}
+                src={`http://localhost:3000/${item.name}`}
                 className="img img-responsive"
                 height="300px"
                 width="300px"

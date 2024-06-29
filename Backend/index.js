@@ -13,8 +13,11 @@ app.use(express.static("public/upload"));
 
 const PORT = process.env.PORT || 3000;
 
-connectToMongo(); // Make sure this function is correctly defined and connects to your MongoDB instance
-
-app.listen(PORT, () => {
-  console.log(`API is running on http://localhost:${PORT}`);
+// Connect to MongoDB
+connectToMongo().then(() => {
+  // Listen on all network interfaces
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`API is running on http://localhost:${PORT}`);
+  });
 });
+
